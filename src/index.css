@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GigOn Design System - Warm & Approachable for Bharat */
+
+@layer base {
+  :root {
+    /* Primary - Warm Orange (India/Bharat) */
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Professional Blue (Trust/Tech) */
+    --secondary: 214 84% 56%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Background & Foreground */
+    --background: 30 20% 98%;
+    --foreground: 24 10% 15%;
+
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 15%;
+
+    /* Muted - Warm Gray */
+    --muted: 30 10% 94%;
+    --muted-foreground: 24 10% 45%;
+
+    /* Accent - Warm Orange Light */
+    --accent: 24 100% 95%;
+    --accent-foreground: 24 95% 35%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border & Input */
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 24 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 30 20% 97%;
+    --sidebar-foreground: 24 10% 25%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 24 100% 95%;
+    --sidebar-accent-foreground: 24 95% 35%;
+    --sidebar-border: 30 15% 88%;
+    --sidebar-ring: 24 95% 53%;
+
+    /* Custom GigOn tokens */
+    --gigon-orange: 24 95% 53%;
+    --gigon-orange-light: 24 100% 95%;
+    --gigon-orange-dark: 24 95% 40%;
+    --gigon-blue: 214 84% 56%;
+    --gigon-blue-light: 214 84% 95%;
+    --gigon-green: 142 76% 36%;
+    --gigon-gold: 45 93% 47%;
+    --gigon-earth: 30 25% 35%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(30 90% 60%) 50%, hsl(45 93% 47%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(30 20% 98%) 0%, hsl(24 100% 98%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(30 20% 99%) 100%);
+  }
+
+  .dark {
+    --primary: 24 95% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 214 84% 60%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --background: 24 10% 10%;
+    --foreground: 30 20% 95%;
+
+    --card: 24 10% 12%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 24 10% 12%;
+    --popover-foreground: 30 20% 95%;
+
+    --muted: 24 10% 18%;
+    --muted-foreground: 30 10% 65%;
+
+    --accent: 24 50% 20%;
+    --accent-foreground: 24 95% 70%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 24 10% 20%;
+    --input: 24 10% 20%;
+    --ring: 24 95% 55%;
+
+    --sidebar-background: 24 10% 8%;
+    --sidebar-foreground: 30 20% 90%;
+    --sidebar-primary: 24 95% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 24 50% 18%;
+    --sidebar-accent-foreground: 24 95% 70%;
+    --sidebar-border: 24 10% 18%;
+    --sidebar-ring: 24 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-warm {
+    background-image: var(--gradient-warm);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
